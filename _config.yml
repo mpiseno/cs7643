@@ -1,1 +1,33 @@
-theme: jekyll-theme-slate
+title: Michael Piseno's Deep Learning Blog
+author:
+  name: "Michael Piseno"
+  email: "mpiseno@gatech.edu"
+description: > # this means to ignore newlines until "show_excerpts:"
+  I post resources for the course I TA, CS 7643: Deep Learning,
+  as well as stuff I think is cool.
+show_excerpts: false # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    linkedin: mpiseno
+    github:  mpiseno
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+# Build settings
+theme: minima
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+
+baseurl: "/cs7643" # the subpath of your site, e.g. /blog
+url: "http://www.michaelpiseno.com" # the base hostname & protocol for your site, e.g. http://example.com
