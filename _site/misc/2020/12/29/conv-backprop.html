@@ -117,7 +117,7 @@
 
 <p>So computing the derivative w.r.t. $\mathbf{X}[r’, c’]$ amounts to summing over the region in $\mathbf{y}$ that depends on $\mathbf{X}[r’, c’]$. Let’s call that region $\mathbf{R}_{r’, c’} \subset \mathbf{y}$. From the image above, we can see</p>
 
-<script type="math/tex; mode=display">\mathbf{R}_{r', c'} = \mathbf{y}[\max(0, r' - k_{1} + 1), \max(0, c' - k_{2} + 1)]</script>
+<script type="math/tex; mode=display">\mathbf{R}_{r', c'} = \mathbf{y}[\max(0, r' - k_{1} + 1) : r', \max(0, c' - k_{2} + 1) : c']</script>
 
 <p>And so,</p>
 
@@ -148,7 +148,7 @@
     &= \mathbf{w}[a, b]
 \end{align*} %]]></script>
 
-<p>Now we can plus this result back into our equation for the derivative w.r.t. $\mathbf{X}[r’, c’]$.</p>
+<p>Now we can plug this result back into our equation for the derivative w.r.t. $\mathbf{X}[r’, c’]$.</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{align*}

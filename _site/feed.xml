@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/cs7643/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/cs7643/" rel="alternate" type="text/html" /><updated>2020-12-31T18:03:14-05:00</updated><id>http://localhost:4000/cs7643/feed.xml</id><title type="html">Michael Piseno’s Deep Learning Blog</title><subtitle>I post resources for the course I TA, CS 7643: Deep Learning, as well as stuff I think is cool.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/cs7643/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/cs7643/" rel="alternate" type="text/html" /><updated>2021-01-01T13:58:32-05:00</updated><id>http://localhost:4000/cs7643/feed.xml</id><title type="html">Michael Piseno’s Deep Learning Blog</title><subtitle>I post resources for the course I TA, CS 7643: Deep Learning, as well as stuff I think is cool.
 </subtitle><author><name>Michael Piseno</name><email>mpiseno@gatech.edu</email></author><entry><title type="html">Backpropagation in Convolutional Layers</title><link href="http://localhost:4000/cs7643/misc/2020/12/29/conv-backprop.html" rel="alternate" type="text/html" title="Backpropagation in Convolutional Layers" /><published>2020-12-29T00:00:00-05:00</published><updated>2020-12-29T00:00:00-05:00</updated><id>http://localhost:4000/cs7643/misc/2020/12/29/conv-backprop</id><content type="html" xml:base="http://localhost:4000/cs7643/misc/2020/12/29/conv-backprop.html">&lt;p&gt;In CS 7643, we’ve been teaching backprop through conv layers with a sets of hand-written notes by professor Dhruv Batra ever since I’ve been a TA, and allegedly since 2015. The content in this post is based heavily on these hand-written notes and Dhruv’s lectures - I am merely making it more accessible by posting here. Here it goes.&lt;/p&gt;
 
 &lt;h2 id=&quot;notation-and-assumptions&quot;&gt;Notation and Assumptions&lt;/h2&gt;
@@ -66,7 +66,7 @@
 
 &lt;p&gt;So computing the derivative w.r.t. $\mathbf{X}[r’, c’]$ amounts to summing over the region in $\mathbf{y}$ that depends on $\mathbf{X}[r’, c’]$. Let’s call that region $\mathbf{R}_{r’, c’} \subset \mathbf{y}$. From the image above, we can see&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathbf{R}_{r', c'} = \mathbf{y}[\max(0, r' - k_{1} + 1), \max(0, c' - k_{2} + 1)]&lt;/script&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathbf{R}_{r', c'} = \mathbf{y}[\max(0, r' - k_{1} + 1) : r', \max(0, c' - k_{2} + 1) : c']&lt;/script&gt;
 
 &lt;p&gt;And so,&lt;/p&gt;
 
@@ -97,7 +97,7 @@
     &amp;= \mathbf{w}[a, b]
 \end{align*} %]]&gt;&lt;/script&gt;
 
-&lt;p&gt;Now we can plus this result back into our equation for the derivative w.r.t. $\mathbf{X}[r’, c’]$.&lt;/p&gt;
+&lt;p&gt;Now we can plug this result back into our equation for the derivative w.r.t. $\mathbf{X}[r’, c’]$.&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
 \begin{align*}

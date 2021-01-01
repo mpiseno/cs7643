@@ -78,7 +78,7 @@ As the kernel passes over $\mathbf{X}$, it passes over the pixel $\mathbf{X}[r',
 
 So computing the derivative w.r.t. $\mathbf{X}[r', c']$ amounts to summing over the region in $\mathbf{y}$ that depends on $\mathbf{X}[r', c']$. Let's call that region $\mathbf{R}_{r', c'} \subset \mathbf{y}$. From the image above, we can see
 
-$$\mathbf{R}_{r', c'} = \mathbf{y}[\max(0, r' - k_{1} + 1), \max(0, c' - k_{2} + 1)]$$
+$$\mathbf{R}_{r', c'} = \mathbf{y}[\max(0, r' - k_{1} + 1) : r', \max(0, c' - k_{2} + 1) : c']$$
 
 And so,
 
@@ -112,7 +112,7 @@ $$
 \end{align*}
 $$
 
-Now we can plus this result back into our equation for the derivative w.r.t. $\mathbf{X}[r', c']$.
+Now we can plug this result back into our equation for the derivative w.r.t. $\mathbf{X}[r', c']$.
 
 $$
 \begin{align*}
